@@ -18,7 +18,7 @@ for address in f1:
   response1 = os.system('hping3 -S -p 80 -c 1 ' + address)
    
   if response1 == 0:
-   f.write("%s,up,icmp block. \n" % address)
+   f.write("%s,up,icmp block \n" % address)
   else:
    response2 = os.system('hping3 -S -p 443 -c 1 ' + address)
 
